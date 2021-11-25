@@ -1,16 +1,9 @@
 /* Background design */
 html {
     width: 100%;
-    background: rgb(74, 33, 102);
+    background: rgba(4,13,33,255);
     height: 100%;
     background-repeat: no-repeat;
-    background-image: radial-gradient(circle at center center, transparent,rgb(23,0,44)),
-    repeating-linear-gradient(145deg, rgb(0,0,0) 0px,
-    rgb(0,0,0) 0px,transparent 0px,
-    transparent 35px,rgb(0,0,0) 19px,
-    rgb(0,0,0) 24px,transparent 24px, transparent 28px),
-    repeating-linear-gradient(235deg, rgb(5,5,5) 0px, rgb(5,5,5) 7px,
-    transparent 7px, transparent 14px),linear-gradient(45deg, rgb(39,0,81),rgb(70,0,70));
 }
 /* Forcing all text on the site to use the same font */
 body {
@@ -67,10 +60,10 @@ h3 {
 #glow-box {
     height: 100%;
     border-radius: 11px;
-    margin-left: 308px;
-    opacity: 0.8;
+    margin-left: 94px;
     border-color: rgb(61, 2, 119);
     box-shadow: 0 0 10px rgb(84, 4, 165);
+    background-color: rgba(61, 2, 119, 0.137);
     text-align: center;
 }
 
@@ -82,15 +75,12 @@ h3 {
 }
 #lglow-box-container {
     padding: 10 10 10 10;
-    box-shadow: 0 0 10px rgba(84, 4, 165, 0.055);
     border-radius: 11px;
-    color: rgb(255, 0, 242);
+    background-color: rgba(12,22,45,255);
+    border: 1px solid #202637;
+        
 }
-.lglow-box-scrollBar {
-    overflow-y: scroll;
-    max-height: 738px;
-    overflow:auto;
-}
+
 /* Text inside glow box thing */
 .glow-Header {
     color: rgb(235,5,90);
@@ -132,13 +122,13 @@ p {
 
 /* Container box that hosts text with animations inside */
 #logo-container {
-    background-color: rgb(27, 1, 54);
+    background-color: rgba(61, 2, 119, 0.137);
     border-radius: 5px;
     float:left;
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 300px;
+    width: 80px;
     height: 100%;
     opacity: 0.9;
     transition: 2s;
@@ -166,8 +156,8 @@ p {
 #logo-text {
     color: #3fdcff;
     display: block;
-    font-size: 74px;
-    width: 119px;
+    font-size: 64px;
+    width: 6px;
     text-align: center;
     writing-mode: vertical-rl;
     text-orientation: upright;
@@ -207,7 +197,7 @@ p {
 /* Navigation mess lol */
 #navigation {
     position: absolute;
-    left: 50%;
+    left: 856px;
     color:rgb(255, 255, 255);
     box-shadow: 0 0 10px rgba(54, 0, 248, 0.226);
     visibility: hidden;
@@ -327,18 +317,18 @@ li.selected {
 /* Responsive design for the logo text */
 @media screen and (max-height: 801px) {
     #logo-text {
-        font-size: 64px;
+        font-size: 54px;
     }
 }
 
 @media screen and (max-height: 651px) {
     #logo-text {
-        font-size: 54px;
+        font-size: 44px;
     }
 }
 @media screen and (max-height: 551px) {
     #logo-text {
-        font-size: 44px;
+        font-size: 34px;
     }
 }
 @media screen and (max-height: 451px) {
@@ -346,7 +336,7 @@ li.selected {
         font-size: 34px;
     }
 }
-  
+
 /* If the screen size is 600px wide or less */
 @media screen and (max-width: 600px) {
 
