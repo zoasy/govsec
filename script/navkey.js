@@ -24,7 +24,7 @@ function closeNav() {
     console.log("Closing nagigation")
     document.getElementById('navigation').style.visibility = 'hidden';
     console.log("Hidding the menu")
-    document.getElementById("logo-text").style.filter="blur(0)";
+    document.getElementById("logo-container-right").style.filter="blur(0)";
     document.getElementById("logo-container").style.filter="blur(0)";
     console.log("Removed logo blur")
     document.getElementById("rainbow-text").style.filter="blur(0)";
@@ -119,7 +119,7 @@ $(window).keydown(function(e) {
             console.log("Closing nagigation")
             document.getElementById('navigation').style.visibility = 'hidden';
             console.log("Hidding the menu")
-            document.getElementById("logo-text").style.filter="blur(0)";
+            document.getElementById("logo-container-right").style.filter="blur(0)";
             document.getElementById("logo-container").style.filter="blur(0)";
             console.log("Removed logo blur")
             document.getElementById("rainbow-text").style.filter="blur(0)";
@@ -152,7 +152,7 @@ function customNav(event) {
             /* Opening the navigation and adding all the cool shit */
             console.log("Opening navigation")
             document.getElementById("lglow-box-container").style.visibility = 'hidden';
-            document.getElementById("logo-text").style.filter="blur(5px)";
+            document.getElementById("logo-container-right").style.filter="blur(5px)";
             document.getElementById("logo-container").style.filter="blur(5px)";
             console.log("Added logo blur") 
             document.getElementById("rainbow-text").style.filter="blur(5px)";
@@ -169,7 +169,7 @@ function customNav(event) {
             console.log("Closing nagigation")
             document.getElementById('navigation').style.visibility = 'hidden';
             console.log("Hidding the menu")
-            document.getElementById("logo-text").style.filter="blur(0)";
+            document.getElementById("logo-container-right").style.filter="blur(0)";
             document.getElementById("logo-container").style.filter="blur(0)";
             console.log("Removed logo blur")
             document.getElementById("rainbow-text").style.filter="blur(0)";

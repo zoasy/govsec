@@ -13,11 +13,16 @@ body {
 /* All header tags */
 h3 {
     color: rgb(102, 144, 252);
-    font-size: 18.72px;
+    font-size: 15.72px;
 }
 
 .x-Changing {
     color: rgb(201, 5, 142);
+}
+
+hr {
+    padding: 1;
+    opacity: 0;
 }
 
 /* Incase the users browser is too small */
@@ -55,12 +60,36 @@ h3 {
         visibility: hidden;
     }
 }
+@media (max-height: 438px) {
+    #browser-too-small {
+        display: block; 
+    }
+    #logo-text {
+        visibility: hidden;
+    }
+    html {
+        background-image: none;
+    }
+    #glow-box {
+        visibility: none;
+    }
+    #glow-box-container {
+        visibility: hidden;
+    }
+    #logo-container {
+        visibility: hidden;
+    }
+    #lglow-box-container {
+        visibility: hidden;
+    }
+}
 
 /* A nice overlapping border with a little opacity */
 #glow-box {
     height: 100%;
     border-radius: 11px;
-    margin-left: 94px;
+    margin-left: 51px;
+    margin-right: 51px;
     border-color: rgb(61, 2, 119);
     box-shadow: 0 0 10px rgb(84, 4, 165);
     background-color: rgba(61, 2, 119, 0.137);
@@ -68,33 +97,37 @@ h3 {
 }
 
 #glow-box-container {
-    padding: 10 10 10 10;
+    padding: 10;
     background-color: rgba(61, 2, 119, 0.137);
     box-shadow: 0 0 10px rgba(84, 4, 165, 0.055);
     border-radius: 11px;
 }
+
+#glow-box-inner-container {
+    padding: 10;
+}
+
 #lglow-box-container {
-    padding: 10 10 10 10;
+    padding: 10;
     border-radius: 11px;
-    background-color: rgba(12,22,45,255);
+    background-color: rgba(15, 12, 54,0.2);
     border: 1px solid #202637;
-        
 }
 
 /* Text inside glow box thing */
 .glow-Header {
     color: rgb(235,5,90);
-    font-size: 48px;
+    font-size: 32px;
     letter-spacing: 1px;
 }
 .glow-Subhead {
     color: rgb(216, 0, 108);
-    font-size: 28px;
+    font-size: 19px;
     letter-spacing: 1px;
 }
 .glow-Credit {
     color: rgb(200, 0, 117);
-    font-size: 24px;
+    font-size: 16px;
     letter-spacing: 1px;
 }
 p {
@@ -128,7 +161,7 @@ p {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 80px;
+    width: 30px;
     height: 100%;
     opacity: 0.9;
     transition: 2s;
@@ -139,6 +172,25 @@ p {
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;
     border-right: 3px solid rgb(255, 2, 213);
+}
+#logo-container-right {
+    background-color: rgba(61, 2, 119, 0.137);
+    border-radius: 5px;
+    float:right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 30px;
+    height: 100%;
+    opacity: 0.9;
+    transition: 2s;
+    animation-delay: 5s;
+    animation-duration: 10s;
+	animation-iteration-count: infinite;
+    animation-name: barGlowr;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-left: 3px solid rgb(255, 2, 213);
 }
 @keyframes barGlow {
     0% {
@@ -151,12 +203,22 @@ p {
         border-right-color: rgb(247, 0, 255);
     }
 }
-
+@keyframes barGlowr {
+    0% {
+        border-left-color: rgb(247, 0, 255);
+    }
+    50% {
+        border-left-color: rgb(2, 255, 255);
+    }
+    100% {
+        border-left-color: rgb(247, 0, 255);
+    }
+}
 /* Text visual design in the purple box */
 #logo-text {
     color: #3fdcff;
     display: block;
-    font-size: 64px;
+    font-size: 16px;
     width: 6px;
     text-align: center;
     writing-mode: vertical-rl;
@@ -196,8 +258,9 @@ p {
 
 /* Navigation mess lol */
 #navigation {
-    position: absolute;
-    left: 856px;
+    position: fixed;
+    left: 0;
+    right: 0;
     color:rgb(255, 255, 255);
     box-shadow: 0 0 10px rgba(54, 0, 248, 0.226);
     visibility: hidden;
@@ -238,6 +301,7 @@ li.selected {
     font-weight: 900;
     animation: navBreathe 1s linear infinite;
 
+    /*! font-size: 12px; */
 }
 @keyframes navBreathe {
     0% {
@@ -260,19 +324,27 @@ li.selected {
     font-weight: 700;
 }
 .nav-Linesplit {
-    color:rgba(69, 2, 255, 0.192)
+    color:rgba(69, 2, 255, 0.192);
+    opacity: 1;
 }
 /* Everything inside the glowing box */
 #rainbow-text {
     transition: 1s;
 	font-weight: 600;
-	font-size: 40px;
+	font-size: 28px;
     text-shadow: 0 0 8px rgba(252, 33, 205, 0.288);
     transition: 2s;
 }
 #rainbow-text .block-line > span {
 	display: inline-block;
 }
+
+
+
+
+
+
+
 
 /* If the screen size is 1201px wide or less */
 @media screen and (max-width: 1201px) {
@@ -312,32 +384,4 @@ li.selected {
     h3 {
         font-size: 12px;
     }
-}
-
-/* Responsive design for the logo text */
-@media screen and (max-height: 801px) {
-    #logo-text {
-        font-size: 54px;
-    }
-}
-
-@media screen and (max-height: 651px) {
-    #logo-text {
-        font-size: 44px;
-    }
-}
-@media screen and (max-height: 551px) {
-    #logo-text {
-        font-size: 34px;
-    }
-}
-@media screen and (max-height: 451px) {
-    #logo-text {
-        font-size: 34px;
-    }
-}
-
-/* If the screen size is 600px wide or less */
-@media screen and (max-width: 600px) {
-
 }
