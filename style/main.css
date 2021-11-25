@@ -1,0 +1,353 @@
+/* Background design */
+html {
+    width: 100%;
+    background: rgb(74, 33, 102);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: radial-gradient(circle at center center, transparent,rgb(23,0,44)),
+    repeating-linear-gradient(145deg, rgb(0,0,0) 0px,
+    rgb(0,0,0) 0px,transparent 0px,
+    transparent 35px,rgb(0,0,0) 19px,
+    rgb(0,0,0) 24px,transparent 24px, transparent 28px),
+    repeating-linear-gradient(235deg, rgb(5,5,5) 0px, rgb(5,5,5) 7px,
+    transparent 7px, transparent 14px),linear-gradient(45deg, rgb(39,0,81),rgb(70,0,70));
+}
+/* Forcing all text on the site to use the same font */
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+/* All header tags */
+h3 {
+    color: rgb(102, 144, 252);
+    font-size: 18.72px;
+}
+
+.x-Changing {
+    color: rgb(201, 5, 142);
+}
+
+/* Incase the users browser is too small */
+#browser-too-small {
+    position: fixed; margin: auto;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 9999;
+    background-color: rgba(61, 2, 119, 0.952);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: rgb(201, 5, 142);
+    display: none;
+}
+@media (max-width: 881px) {
+    #browser-too-small {
+        display: block; 
+    }
+    #logo-text {
+        visibility: hidden;
+    }
+    html {
+        background-image: none;
+    }
+    #glow-box {
+        visibility: none;
+    }
+    #glow-box-container {
+        visibility: hidden;
+    }
+    #logo-container {
+        visibility: hidden;
+    }
+    #lglow-box-container {
+        visibility: hidden;
+    }
+}
+
+/* A nice overlapping border with a little opacity */
+#glow-box {
+    height: 100%;
+    border-radius: 11px;
+    margin-left: 308px;
+    opacity: 0.8;
+    border-color: rgb(61, 2, 119);
+    box-shadow: 0 0 10px rgb(84, 4, 165);
+    text-align: center;
+}
+
+#glow-box-container {
+    padding: 10 10 10 10;
+    background-color: rgba(61, 2, 119, 0.137);
+    box-shadow: 0 0 10px rgba(84, 4, 165, 0.055);
+    border-radius: 11px;
+}
+#lglow-box-container {
+    padding: 10 10 10 10;
+    box-shadow: 0 0 10px rgba(84, 4, 165, 0.055);
+    border-radius: 11px;
+    color: rgb(255, 0, 242);
+}
+.lglow-box-scrollBar {
+    overflow-y: scroll;
+    max-height: 738px;
+    overflow:auto;
+}
+/* Text inside glow box thing */
+.glow-Header {
+    color: rgb(235,5,90);
+    font-size: 48px;
+    letter-spacing: 1px;
+}
+.glow-Subhead {
+    color: rgb(216, 0, 108);
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+.glow-Credit {
+    color: rgb(200, 0, 117);
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+p {
+    text-indent: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container box that hosts text with animations inside */
+#logo-container {
+    background-color: rgb(27, 1, 54);
+    border-radius: 5px;
+    float:left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 300px;
+    height: 100%;
+    opacity: 0.9;
+    transition: 2s;
+    animation-delay: 5s;
+    animation-duration: 10s;
+	animation-iteration-count: infinite;
+    animation-name: barGlow;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border-right: 3px solid rgb(255, 2, 213);
+}
+@keyframes barGlow {
+    0% {
+        border-right-color: rgb(247, 0, 255);
+    }
+    50% {
+        border-right-color: rgb(2, 255, 255);
+    }
+    100% {
+        border-right-color: rgb(247, 0, 255);
+    }
+}
+
+/* Text visual design in the purple box */
+#logo-text {
+    color: #3fdcff;
+    display: block;
+    font-size: 74px;
+    width: 119px;
+    text-align: center;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    animation-name: fade;
+    animation-delay: 5s;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    transition: 2s;
+    animation-iteration-count: infinite;
+}
+
+/* Breathing/opacity animation */
+@keyframes fade {
+    0% {
+        opacity: 1;
+        color: #3fdcff;
+        text-shadow: 0 0 8px rgba(73, 33, 252, 0.288);
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        color: #fe51fe;
+        text-shadow: 0 0 8px rgba(252, 33, 205, 0.288);
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        color: #3fdcff;
+        text-shadow: 0 0 8px rgba(73, 33, 252, 0.288);
+    }
+}
+
+/* Navigation mess lol */
+#navigation {
+    position: absolute;
+    left: 50%;
+    color:rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(54, 0, 248, 0.226);
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.26);
+    border-radius: 15px;
+    width: 300px;
+    height: 50%;
+    opacity: 1;
+    margin: 0 auto;
+    cursor: default;
+    -moz-user-select: none;
+    user-select: none;
+    line-height: 1.2;
+}
+a {
+    text-decoration: none;
+    color:rgb(102, 144, 252)
+}
+li {
+    list-style-type: none;
+    color:rgb(223,223,223);
+    font-weight: 500;
+}
+
+li.selected {
+    color:rgb(233,233,233);
+    background-color: rgb(83, 61, 248);
+    border-radius: 1px;
+    border-color: rgb(96, 121, 232);
+    transition: .1s;
+}
+.Header-container {
+    height: 43px;
+}
+.nav-Header {
+    color:rgb(240, 0, 248);
+    margin-top: 6px;
+    font-weight: 900;
+    animation: navBreathe 1s linear infinite;
+
+}
+@keyframes navBreathe {
+    0% {
+        color: #fe51fe;
+        font-size: 32px;
+    }
+    50% {
+        font-size: 34px;
+        color: #3fdcff;
+    }
+    100% {
+        font-size: 32px;
+        color: #fe51fe;
+    }
+}
+.nav-Directory {
+    color:rgb(166, 0, 242);
+    margin-top: 2.92px;
+    margin-bottom: 2.92px;
+    font-weight: 700;
+}
+.nav-Linesplit {
+    color:rgba(69, 2, 255, 0.192)
+}
+/* Everything inside the glowing box */
+#rainbow-text {
+    transition: 1s;
+	font-weight: 600;
+	font-size: 40px;
+    text-shadow: 0 0 8px rgba(252, 33, 205, 0.288);
+    transition: 2s;
+}
+#rainbow-text .block-line > span {
+	display: inline-block;
+}
+
+/* If the screen size is 1201px wide or less */
+@media screen and (max-width: 1201px) {
+    #rainbow-text {
+        font-size: 35px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+}
+
+/* If the screen size is 999px wide or less */
+@media screen and (max-width: 999px) {
+    #rainbow-text {
+        font-size: 25px;
+    }
+    h3 {
+        font-size: 14px;
+    }
+}
+
+/* If the screen size is 801px wide or less */
+@media screen and (max-width: 999px) {
+    #rainbow-text {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 13px;
+    }
+}
+
+/* If the screen size is 801px wide or less */
+@media screen and (max-width: 701px) {
+    #rainbow-text {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 12px;
+    }
+}
+
+/* Responsive design for the logo text */
+@media screen and (max-height: 801px) {
+    #logo-text {
+        font-size: 64px;
+    }
+}
+
+@media screen and (max-height: 651px) {
+    #logo-text {
+        font-size: 54px;
+    }
+}
+@media screen and (max-height: 551px) {
+    #logo-text {
+        font-size: 44px;
+    }
+}
+@media screen and (max-height: 451px) {
+    #logo-text {
+        font-size: 34px;
+    }
+}
+  
+/* If the screen size is 600px wide or less */
+@media screen and (max-width: 600px) {
+
+}

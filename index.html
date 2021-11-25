@@ -1,1 +1,89 @@
+<html onkeypress="customNav(event)">
+<head>
+    <title><3 | G O V S E C</title>
+    <script src="script/title.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css'>
+</head>
+<body id="body" onload="load()">
+    <div id="logo-container">
+        <p id="logo-text">G O V S E C</p>
+    </div>
+    <div id="glow-box">
+        <div id="glow-box-container">
+            <h1>
+                <div id="rainbow-text" style="text-align: center;margin-top: -20px;">
+                    <span class="block-line">
+                        <span>
+                            <span style="color:#fe51fe;">W</span>
+                            <span style="color:#3fdcff;">e</span>
+                            <span style="color:#fe51fe;">l</span>
+                            <span style="color:#3fdcff;">c</span>
+                            <span style="color:#fe51fe;">o</span>
+                            <span style="color:#3fdcff;">m</span>
+                            <span style="color:#fe51fe;">e&nbsp;</span>
+                        </span>
+                        <span>
+                            <span style="color:#3fdcff;">u</span>
+                            <span style="color:#fe51fe;">s</span>
+                            <span style="color:#3fdcff;">e</span>
+                            <span style="color:#fe51fe;">r&nbsp;</span>
+                        </span>
+                        <span>
+                            <span style="color:#3fdcff;">t</span>
+                            <span style="color:#fe51fe;">o&nbsp;</span>
+                        </span>
+                        <span>
+                            <span style="color:#3fdcff;">g</span>
+                            <span style="color:#fe51fe;">o</span>
+                            <span style="color:#3fdcff;">v</span>
+                            <span style="color:#fe51fe;">s</span>
+                            <span style="color:#3fdcff;">e</span>
+                            <span style="color:#fe51fe;">c</span>
+                        </span>
+                    </span>
+                </div>
+            </h1>
+            <div id="subheader-main">
+                <div>
+                    <p><h3 id="sub-nav-text">Press <span class="x-Changing">X</span> to <span id="Current-nav">open</span> navigation</h3></p>
+                </div>
+            </div>
+        </div>
+        <div id="navigation">
+            <div class="Header-container">
+                <h1 class="nav-Header">Govsec</h1>
+            </div>
+            <h3 class="nav-Directory">Main Menu</h3>
+            <hr class="nav-Linesplit">
+            <ul id="navHandle" style="padding-left: 0px;">
+                <li id="s1">Home</li>
+                <li>News</li>
+                <li>Contact</li>
+                <li>Gallary</li>
+                <li>Settings</li>
+            </ul>
+        </div>
+        <div id="lglow-box-container">
+            <div class="lglow-box-scrollBar">
 
+            </div>
+        </div>
+    </div>
+    <div id="browser-too-small">
+        <div>
+            <p>For security reasons devices below <span style="color: red">1281</span> in width have been <span style="color: red">disallowed access</span><br>
+                <span style="color: red">Mobile devices</span> are <span style="color: red">not</span> permitted to access this website.<br>
+            Use this secure setup: <a href="https://mullvad.net/">Mulvard</a> <span style="color: rgb(0, 255, 213)">Z</span> <a href="https://www.mozilla.org/firefox/features/private-browsing/">Firefox</a>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="script/navkey.js"></script>
+<script>
+    function load() {
+        $('#lglow-box-container').load('home.html');
+    }
+</script>
+</html>
