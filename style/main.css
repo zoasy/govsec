@@ -8,6 +8,7 @@ html {
 /* Forcing all text on the site to use the same font */
 body {
     font-family: 'Nunito', sans-serif;
+   
 }
 
 /* All header tags */
@@ -37,7 +38,7 @@ hr {
     color: rgb(201, 5, 142);
     display: none;
 }
-@media (max-width: 881px) {
+@media (max-width: 1600px) {
     #browser-too-small {
         display: block; 
     }
@@ -60,7 +61,7 @@ hr {
         visibility: hidden;
     }
 }
-@media (max-height: 438px) {
+@media (max-height: 100px) {
     #browser-too-small {
         display: block; 
     }
@@ -94,6 +95,8 @@ hr {
     box-shadow: 0 0 10px rgb(84, 4, 165);
     background-color: rgba(61, 2, 119, 0.137);
     text-align: center;
+       overflow:auto;
+
 }
 
 #glow-box-container {
@@ -108,11 +111,16 @@ hr {
 }
 
 #lglow-box-container {
-    padding: 10;
+    /*! padding: 0px; */
     border-radius: 11px;
     background-color: rgba(15, 12, 54,0.2);
     border: 1px solid #202637;
 }
+
+
+
+
+
 
 /* Text inside glow box thing */
 .glow-Header {
@@ -121,33 +129,68 @@ hr {
     letter-spacing: 1px;
 }
 .glow-Subhead {
-    color: rgb(216, 0, 108);
+    color: rgb(196, 2, 99);
     font-size: 19px;
-    letter-spacing: 1px;
-}
-.glow-Credit {
-    color: rgb(200, 0, 117);
-    font-size: 16px;
     letter-spacing: 1px;
 }
 p {
     text-indent: 5px;
+    color: rgb(187,191,191);
+}
+
+.item1 { grid-area: header; }
+.item2 { 
+    grid-area: main;
+    border: 1px solid #202637
+}
+.item3 { 
+    grid-area: right;
+    border: 1px solid #202637
+}
+.item4 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'main main main main right right';
+  grid-gap: 10px;
+  background-color: rgba(15, 12, 54,0.2);
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(15, 12, 54,0.2);
+  padding: 20px 0;
+  font-size: 16px;
+}
+
+/* Rank name animations */
+.names-higher {
+    color: transparent;
+    background-image: url();
+}
+
+hr.sep { 
+    background-color: rgb(63, 45, 163);
+    opacity: 0.3;
+    border: none;
+    width: 30%
+}
+
+h2 {
+    color: rgb(233,233,233)
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media only screen and (max-width: 1201px) {
+    .col {
+        margin: 1% 0 1% 0%;
+    }
+    [class*='grid_'] {
+        width: 100%;
+    }
+}
 
 
 
