@@ -366,8 +366,9 @@ li.selected {
     font-weight: 700;
 }
 .nav-Linesplit {
-    color:rgba(69, 2, 255, 0.192);
+    background-color:rgb(39 10 128 / 34%);
     opacity: 1;
+    border: none;
 }
 /* Everything inside the glowing box */
 #rainbow-text {
