@@ -38,7 +38,7 @@ hr {
     color: rgb(201, 5, 142);
     display: none;
 }
-@media (max-width: 1600px) {
+@media (max-width: 1281px) {
     #browser-too-small {
         display: block; 
     }
@@ -61,7 +61,7 @@ hr {
         visibility: hidden;
     }
 }
-@media (max-height: 100px) {
+@media (max-height: 524px) {
     #browser-too-small {
         display: block; 
     }
