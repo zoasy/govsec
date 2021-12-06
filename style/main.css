@@ -370,61 +370,40 @@ li.selected {
     opacity: 1;
     border: none;
 }
-/* Everything inside the glowing box */
-#rainbow-text {
-    transition: 1s;
-	font-weight: 600;
-	font-size: 28px;
-    text-shadow: 0 0 8px rgba(252, 33, 205, 0.288);
-    transition: 2s;
-}
-#rainbow-text .block-line > span {
-	display: inline-block;
-}
 
-
-
-
-
-
-
-
-/* If the screen size is 1201px wide or less */
+/* If the screen size is 801px wide or less */
 @media screen and (max-width: 1201px) {
     #rainbow-text {
-        font-size: 35px;
-    }
-    h3 {
-        font-size: 16px;
-    }
-}
-
-/* If the screen size is 999px wide or less */
-@media screen and (max-width: 999px) {
-    #rainbow-text {
-        font-size: 25px;
+        font-size: 17px;
     }
     h3 {
         font-size: 14px;
     }
-}
-
-/* If the screen size is 801px wide or less */
-@media screen and (max-width: 999px) {
-    #rainbow-text {
-        font-size: 20px;
+    
+    h2 { 
+        font-size: 16px;
     }
-    h3 {
+    
+    p {
         font-size: 13px;
     }
 }
 
 /* If the screen size is 801px wide or less */
-@media screen and (max-width: 701px) {
+@media screen and (max-width: 385px) {
     #rainbow-text {
-        font-size: 18px;
+        font-size: 12px;
     }
     h3 {
+        font-size: 11px;
+    }
+    
+    h2 { 
+        font-size: 13px;
+    }
+    
+    p {
         font-size: 12px;
     }
 }
+
