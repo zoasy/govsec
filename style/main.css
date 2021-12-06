@@ -38,7 +38,7 @@ hr {
     color: rgb(201, 5, 142);
     display: none;
 }
-@media (max-width: 1281px) {
+@media (max-width: 933px) {
     #browser-too-small {
         display: block; 
     }
