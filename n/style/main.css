@@ -1,0 +1,67 @@
+/* Background design */
+html {
+    width: 100%;
+    background: rgb(19, 4, 33);
+    height: 100%;
+    background-repeat: no-repeat;
+}
+/* Forcing all text on the site to use the same font */
+body {
+    font-family: 'Nunito', sans-serif;
+   
+}
+
+nav {
+    background: rgba(78, 8, 143, 0.2);
+    height: 34px;
+    border: 4px solid #2b284f;
+    text-align: center;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
+
+.nava {
+    color: #4c438d;
+    padding: 8px;
+    text-decoration: dashed;
+}
+.nava:hover {
+    color: green;
+
+}
+
+
+
+#header {
+    padding: 30px;
+    text-align: center;
+    color:rgb(197, 197, 197)
+}
+
+pre {
+    font-size: 18px;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
+#table {
+    padding: 10;
+    background-color:rgba(197, 197, 197, 0.09);
+    width: fit-content;
+    width: 90%;
+    margin: auto;
+}
+.flex-container {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: center;
+}
+.load-articles {
+    overflow:auto;
+}

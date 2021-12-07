@@ -1,0 +1,38 @@
+<head>
+    <title>Govsec | News</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+    <nav>
+        <a class="fa fa-address-card-o fa-lg nava" title="Contact" href="/index.html"></a>
+        <a class="fa fa-newspaper-o fa-lg nava" title="News" href="/index.html"></a>
+        <a class="fa fa-home fa-lg nava" title="Home" href="/index.html"></a>
+        <a class="fa fa-image fa-lg nava" title="Gallary" href="/index.html"></a>
+        <a class="fa fa-legal fa-lg nava" title="Policy" href="/index.html"></a>
+    </nav>
+    <div id="header">
+<pre>
+   ____  ___ _      _______
+  / __ \/ _ \ | /| / / ___/
+ / / / /  __/ |/ |/ (__  ) 
+/_/ /_/\___/|__/|__/____/  
+</pre>
+    </div>
+    <div id="table">
+        <div class="flex-container">
+            <object class="load-articles" type="text/html" data="/articles/index.html">
+
+            </object>
+         </div>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+<script>
+    function load() {
+        $('#flex-container').load('articles/index/html')
+    }
+</script>
+</html>
