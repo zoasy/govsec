@@ -97,7 +97,7 @@ $(window).keydown(function(e) {
                 console.log("You are now viewing the home page");
             }
             if (listClass == "News") {
-                $('#lglow-box-container').load('n/');
+                window.location.assign("n/");
                 console.log("You are now viewing the news page");
             }  
             if (listClass == "Members") {
