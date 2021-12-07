@@ -1,0 +1,409 @@
+/* Background design */
+html {
+    width: 100%;
+    background: rgba(4,13,33,255);
+    height: 100%;
+    background-repeat: no-repeat;
+}
+/* Forcing all text on the site to use the same font */
+body {
+    font-family: 'Nunito', sans-serif;
+   
+}
+
+/* All header tags */
+h3 {
+    color: rgb(102, 144, 252);
+    font-size: 15.72px;
+}
+
+.x-Changing {
+    color: rgb(201, 5, 142);
+}
+
+hr {
+    padding: 1;
+    opacity: 0;
+}
+
+/* Incase the users browser is too small */
+#browser-too-small {
+    position: fixed; margin: auto;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 9999;
+    background-color: rgba(61, 2, 119, 0.952);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: rgb(201, 5, 142);
+    display: none;
+}
+@media (max-width: 933px) {
+    #browser-too-small {
+        display: block; 
+    }
+    #logo-text {
+        visibility: hidden;
+    }
+    html {
+        background-image: none;
+    }
+    #glow-box {
+        visibility: none;
+    }
+    #glow-box-container {
+        visibility: hidden;
+    }
+    #logo-container {
+        visibility: hidden;
+    }
+    #lglow-box-container {
+        visibility: hidden;
+    }
+}
+@media (max-height: 524px) {
+    #browser-too-small {
+        display: block; 
+    }
+    #logo-text {
+        visibility: hidden;
+    }
+    html {
+        background-image: none;
+    }
+    #glow-box {
+        visibility: none;
+    }
+    #glow-box-container {
+        visibility: hidden;
+    }
+    #logo-container {
+        visibility: hidden;
+    }
+    #lglow-box-container {
+        visibility: hidden;
+    }
+}
+
+/* A nice overlapping border with a little opacity */
+#glow-box {
+    height: 100%;
+    border-radius: 11px;
+    margin-left: 51px;
+    margin-right: 51px;
+    border-color: rgb(61, 2, 119);
+    box-shadow: 0 0 10px rgb(84, 4, 165);
+    background-color: rgba(61, 2, 119, 0.137);
+    text-align: center;
+       overflow:auto;
+
+}
+
+#glow-box-container {
+    padding: 10;
+    background-color: rgba(61, 2, 119, 0.137);
+    box-shadow: 0 0 10px rgba(84, 4, 165, 0.055);
+    border-radius: 11px;
+}
+
+#glow-box-inner-container {
+    padding: 10;
+}
+
+#lglow-box-container {
+    /*! padding: 0px; */
+    border-radius: 11px;
+    background-color: rgba(15, 12, 54,0.2);
+    border: 1px solid #202637;
+}
+
+
+
+
+
+
+/* Text inside glow box thing */
+.glow-Header {
+    color: rgb(235,5,90);
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+.glow-Subhead {
+    color: rgb(196, 2, 99);
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+p {
+    text-indent: 5px;
+    color: rgb(187,191,191);
+}
+
+.item1 { grid-area: header; }
+.item2 { 
+    grid-area: main;
+    border: 1px solid #202637
+}
+.item3 { 
+    grid-area: right;
+    border: 1px solid #202637
+}
+.item4 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'main main main main right right';
+  grid-gap: 10px;
+  background-color: rgba(15, 12, 54,0.2);
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(15, 12, 54,0.2);
+  font-size: 16px;
+}
+
+/* Rank name animations */
+.names-higher {
+    color: transparent;
+    background-image: url();
+}
+
+hr.sep { 
+    background-color: rgb(63, 45, 163);
+    opacity: 0.3;
+    border: none;
+    width: 30%
+}
+
+h2 {
+    color: rgb(233,233,233)
+}
+
+
+@media only screen and (max-width: 1201px) {
+    .col {
+        margin: 1% 0 1% 0%;
+    }
+    [class*='grid_'] {
+        width: 100%;
+    }
+}
+
+
+
+
+
+/* Container box that hosts text with animations inside */
+#logo-container {
+    background-color: rgba(61, 2, 119, 0.137);
+    border-radius: 5px;
+    float:left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 30px;
+    height: 100%;
+    opacity: 0.9;
+    transition: 2s;
+    animation-delay: 5s;
+    animation-duration: 10s;
+	animation-iteration-count: infinite;
+    animation-name: barGlow;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border-right: 3px solid rgb(255, 2, 213);
+}
+#logo-container-right {
+    background-color: rgba(61, 2, 119, 0.137);
+    border-radius: 5px;
+    float:right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 30px;
+    height: 100%;
+    opacity: 0.9;
+    transition: 2s;
+    animation-delay: 5s;
+    animation-duration: 10s;
+	animation-iteration-count: infinite;
+    animation-name: barGlowr;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-left: 3px solid rgb(255, 2, 213);
+}
+@keyframes barGlow {
+    0% {
+        border-right-color: rgb(247, 0, 255);
+    }
+    50% {
+        border-right-color: rgb(2, 255, 255);
+    }
+    100% {
+        border-right-color: rgb(247, 0, 255);
+    }
+}
+@keyframes barGlowr {
+    0% {
+        border-left-color: rgb(247, 0, 255);
+    }
+    50% {
+        border-left-color: rgb(2, 255, 255);
+    }
+    100% {
+        border-left-color: rgb(247, 0, 255);
+    }
+}
+/* Text visual design in the purple box */
+#logo-text {
+    color: #3fdcff;
+    display: block;
+    font-size: 16px;
+    width: 6px;
+    text-align: center;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    animation-name: fade;
+    animation-delay: 5s;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    transition: 2s;
+    animation-iteration-count: infinite;
+}
+
+/* Breathing/opacity animation */
+@keyframes fade {
+    0% {
+        opacity: 1;
+        color: #3fdcff;
+        text-shadow: 0 0 8px rgba(73, 33, 252, 0.288);
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        color: #fe51fe;
+        text-shadow: 0 0 8px rgba(252, 33, 205, 0.288);
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        color: #3fdcff;
+        text-shadow: 0 0 8px rgba(73, 33, 252, 0.288);
+    }
+}
+
+/* Navigation mess lol */
+#navigation {
+    position: fixed;
+    left: 0;
+    right: 0;
+    color:rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(54, 0, 248, 0.226);
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.26);
+    border-radius: 15px;
+    width: 300px;
+    height: 50%;
+    opacity: 1;
+    margin: 0 auto;
+    cursor: default;
+    -moz-user-select: none;
+    user-select: none;
+    line-height: 1.2;
+}
+a {
+    text-decoration: none;
+    color:rgb(102, 144, 252)
+}
+li {
+    list-style-type: none;
+    color:rgb(223,223,223);
+    font-weight: 500;
+}
+
+li.selected {
+    color:rgb(233,233,233);
+    background-color: rgb(83, 61, 248);
+    border-radius: 1px;
+    border-color: rgb(96, 121, 232);
+    transition: .1s;
+}
+.Header-container {
+    height: 43px;
+}
+.nav-Header {
+    color:rgb(240, 0, 248);
+    margin-top: 6px;
+    font-weight: 900;
+    animation: navBreathe 1s linear infinite;
+
+    /*! font-size: 12px; */
+}
+@keyframes navBreathe {
+    0% {
+        color: #fe51fe;
+        font-size: 32px;
+    }
+    50% {
+        font-size: 34px;
+        color: #3fdcff;
+    }
+    100% {
+        font-size: 32px;
+        color: #fe51fe;
+    }
+}
+.nav-Directory {
+    color:rgb(166, 0, 242);
+    margin-top: 2.92px;
+    margin-bottom: 2.92px;
+    font-weight: 700;
+}
+.nav-Linesplit {
+    background-color:rgb(39 10 128 / 34%);
+    opacity: 1;
+    border: none;
+}
+
+/* If the screen size is 801px wide or less */
+@media screen and (max-width: 1201px) {
+    #rainbow-text {
+        font-size: 17px;
+    }
+    h3 {
+        font-size: 14px;
+    }
+    
+    h2 { 
+        font-size: 16px;
+    }
+    
+    p {
+        font-size: 13px;
+    }
+}
+
+/* If the screen size is 801px wide or less */
+@media screen and (max-width: 385px) {
+    #rainbow-text {
+        font-size: 12px;
+    }
+    h3 {
+        font-size: 11px;
+    }
+    
+    h2 { 
+        font-size: 13px;
+    }
+    
+    p {
+        font-size: 12px;
+    }
+}
+

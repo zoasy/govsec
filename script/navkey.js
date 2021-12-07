@@ -97,9 +97,13 @@ $(window).keydown(function(e) {
                 console.log("You are now viewing the home page");
             }
             if (listClass == "News") {
-                window.location.assign("news.html");
-                console.log("You are now viewing the contact page");
+                $('#lglow-box-container').load('news.html');
+                console.log("You are now viewing the news page");
             }  
+            if (listClass == "Members") {
+                $('#lglow-box-container').load('members.html');
+                console.log("You are now viewing the members page");
+            }
             if (listClass == "Contact") {
                 $('#lglow-box-container').load('contact.html');
                 console.log("You are now viewing the contact page");
